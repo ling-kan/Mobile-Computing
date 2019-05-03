@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@android:color/holo_blue_bright"
+    tools:context="com.example.lingkan.myapplication.locationActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <RelativeLayout
+        android:id="@+id/pickerLayout"
+        android:layout_width="357dp"
+        android:layout_height="181dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/locationLayout"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1">
+
+        <Button
+            android:id="@+id/pickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/colorPressedHighlight"
+            android:onClick="pickerClick"
+            android:text="Find your next destination"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <TextView
+            android:id="@+id/textPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Find your next place to go\n by clicking on the orange buton"
+            android:textAlignment="center"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickerButton"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="360dp"
+        android:layout_height="266dp"
+        android:layout_marginBottom="67dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Location"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:typeface="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.472"
+            android:layout_below="@+id/openGoogleMap"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="11dp" />
+
+        <Button
+            android:id="@+id/openGoogleMap"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="#3b5800"
+            android:onClick="googleMapClick"
+            android:text="Get Location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textLocation"
+            android:padding="20dp"
+            android:text="Error!"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.759"
+            tools:layout_editor_absoluteX="-20dp" />
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginLeft="57dp"
+            android:background="#ff6f00"
+            android:onClick="addClick"
+            android:text="Add Location"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintBaseline_toBaselineOf="@+id/viewButton"
+            app:layout_constraintLeft_toLeftOf="@+id/locationLayout"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/viewButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/addButton"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="55dp"
+            android:layout_toStartOf="@+id/addButton"
+            android:background="#ff6f00"
+            android:onClick="viewClick"
+            android:text="View Data"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintBottom_toTopOf="@+id/pickerButton"
+            app:layout_constraintLeft_toRightOf="@+id/addButton"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_alignTop="@+id/addButton" />
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
